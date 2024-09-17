@@ -1,0 +1,91 @@
+body{
+    font-size: 16px; /*tamaño de la letra 1em =1M*/
+    margin: 0px auto;
+    max-width: 1024;
+    --color-fondo-header:rgb(228, 223, 228);
+}
+
+footer{
+    background: black ;
+    margin-top:15px;
+}
+footer article{
+    color:white;
+    display:inline-block;
+    height:100px;
+    padding:30px;
+    width:32.8%;
+}
+
+header{
+    background: var(--color-fondo-header);
+    margin-bottom:15px;
+}
+
+header nav{ /*menu*/
+    background-color: rgb(207, 204, 206);
+    border-radius:5px;
+    margin: 0px auto;
+    padding: 2px 0px;
+    width:99%;
+}
+header nav form input{
+    border-radius: 5px;;
+}
+header nav form input[type="submit"]{
+    border:1px solid green;
+    background: green;
+    color:white;
+}
+header nav form{
+    float: right;
+    margin-top: -40px;
+    margin-right: 20px;
+}
+
+header nav ul li{
+    color:white;/*color de la letra*/
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nito{
+    font-weight:bold;/*negrita*/
+}
+.unaSeccion{
+    font-size: 4.5em;/*4.5 X 16*/
+}
+.otraSeccion{
+    font-size: 2.5em;/*4.5 X 16*/
+}
+
+#seccion02 article input[type="submit"]{
+    background: white;
+    color:blue;
+    padding: 5px 15px;
+    border-radius:5px;
+    margin-left:40%;
+}
+
+#logo{
+    float: left;
+    margin-top: -130px;
+}
+#seccion01 article{
+    margin-top: 15px;
+}
+
+#seccion01 article{
+    text-align:center;
+}
+
+#seccion01 article img{
+    border: 5px solid rgba(180,180,180,0.3);
+    width: 90%;
+}
+
+#seccion02 article{
+    width:32.8%;
+    vertical-align:top;
+    display: inline-block;
+}
