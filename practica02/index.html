@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="1">
     <title>Practica 02 CSS</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <img src="img/banner.png" alt="Banner">
-        <img src="img/granthams.png" alt="Granthams">
-        <img src="img/paint.png" alt="Paint">
+        <img src="img/granthams.png" alt="Granthams" id="granthams">
+        <img src="img/paint.png" alt="Paint" id="paint">
         <input type="search" placeholder="Search">
         <nav>
             <ul>Print</ul>
@@ -20,12 +21,14 @@
             <ul>Exhibition</ul>
         </nav>
     </header>
-    <section>
-        <article>
+    <section id="primerSeccion">
+        <article id="secc01art01">
             <img src="img/slide.jpg" alt="Slide">
         </article>
-        <article>
-            We can offer...
+        <article id="secc01art02">
+            <span class="colorrosa letragrande nito">
+                We can offer...
+            </span>
             <ul>
                 <li>Highly Competitive Prices</li>
                 <li>Variable Data</li>
@@ -37,33 +40,50 @@
                 <li>Great Customer Service</li>
             </ul>
         </article>
-        <img src="img/bg_offer.png" alt="Offers">
+        <img src="img/bg_offer.png" alt="Offers" id="bgoffer">
     </section>
     <section>
         <article>
+            <span class="colorrosa letramediana nito">
+                01772 250207
+            </span>
+        </article>
+    </section>
+    <section id="terceraSeccion">
+        <article>
             <img src="img/cerdito.png" alt="Cerdito">
-            Save this Spring
+            <span class="colorrosa nito">
+                Save this Spring
+            </span>
             <br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, aliquid suscipit impedit ipsa ut ex dolore atque? Officia alias laudantium nobis tempora tempore itaque perferendis aliquam cum. Earum, quia distinctio.
             <p></p>
-            Find our more...
+            <span class="colorrosa nito">
+                Find our more...
+            </span>
         </article>
         <article>
             <img src="img/hoja.png" alt="Hoja">
-            ECO Friendly
+            <span class="colorverde nito">
+                ECO Friendly
+            </span>
             <br>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et hic consectetur, itaque in repudiandae architecto numquam excepturi nemo? Tempore, dicta. In perferendis modi placeat expedita necessitatibus est quod inventore odit!
         </article>
         <article>
             <img src="img/new.png" alt="Nuevo">
-            Upload your File 
+            <span class="colorazul nito">
+                Upload your File 
+            </span>
             <br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit provident rem est eaque ex enim ratione, alias impedit ipsum repudiandae sit esse, inventore quas aliquam sunt quod quaerat pariatur. Aperiam.
             <p></p>
             Upload Your File Now...
         </article>
         <article>
-            Stay in touch
+            <span class="colorrosa letramediana">
+                Stay in touch
+            </span>
             <br>
             Join our mailing list today <br>
             <input type="email" placeholder="Email goes here">
@@ -85,9 +105,9 @@
         <article>
             <input type="button" value="Valid HTML5">
         </article>
-        <img src="img/icon_facebook.png" alt="Facebook">
-        <img src="img/icon_twitter.png" alt="X">
-        <img src="img/image-right.png" alt="Personas">
+        <img src="img/icon_facebook.png" alt="Facebook" id="facebook">
+        <img src="img/icon_twitter.png" alt="X" id="twitter">
+        <img src="img/image-right.png" alt="Personas" id="personas">
     </footer>
 </body>
 </html>
