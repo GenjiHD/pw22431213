@@ -1,0 +1,109 @@
+article{
+    border-radius:  5px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    width: 150px;
+}
+#uno{
+    /*si no soporta gradientes*/
+    background: red;
+    /*Opera*/
+    background: -o-linear-gradient(rgba(255,0,0,1), rgba(255,255,0,1)blue);
+    /*Safari*/
+    background: -webkit-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1),blue);
+    /*Firefox*/
+    background: -moz-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1),blue);
+    /*Microsoft - Edge*/
+    background: -ms-linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1),blue);
+    /*Todos*/
+    background: linear-gradient(rgba(255,0,0,1),rgba(255,255,0,1),blue);
+}
+#dos{
+    /*si no soporta gradientes*/
+    background: red;
+    /*Opera*/
+    background: -o-linear-gradient(to left,red,yellowblue);
+    /*Safari*/
+    background: -webkit-linear-gradient(to left,red,yellow,blue);
+    /*Firefox*/
+    background: -moz-linear-gradient(to left,red,yellow,blue);
+    /*Microsoft - Edge*/
+    background: -ms-linear-gradient(to left,red,yellowblue);
+    /*Todos*/
+    background: linear-gradient(to left,red,yellow,blue);
+}
+#tres{
+    /*si no soporta gradientes*/
+    background: red;
+    /*Opera*/
+    background: -o-linear-gradient(to right,red,yellow,blue);
+    /*Safari*/
+    background: -webkit-linear-gradient(to right,red,yellow,blue);
+    /*Firefox*/
+    background: -moz-linear-gradient(to right,red,yellow,blue);
+    /*Microsoft - Edge*/
+    background: -ms-linear-gradient(to right,red,yellow,blue);
+    /*Todos*/
+    background: linear-gradient(to right,red,yellow,blue);
+}
+#cuatro{
+    /*si no soporta gradientes*/
+    background: red;
+    /*Opera*/
+    background: -o-linear-gradient(to right bottom,red,yellow,blue);
+    /*Safari*/
+    background: -webkit-linear-gradient(to right bottom,red,yellow,blue);
+    /*Firefox*/
+    background: -moz-linear-gradient(to right bottom,red,yellow,blue);
+    /*Microsoft - Edge*/
+    background: -ms-linear-gradient(to right bottom,red,yellow,blue);
+    /*Todos*/
+    background: linear-gradient(to right bottom,red,yellow,blue);
+}
+#cinco{
+    /*si no soporta gradientes*/
+    background: red;
+    /*Opera*/
+    background: -o-linear-gradient(to left bottom,red,yellow,blue);
+    /*Safari*/
+    background: -webkit-linear-gradient(to left bottom,red,yellow,blue);
+    /*Firefox*/
+    background: -moz-linear-gradient(to left bottom,red,yellow,blue);
+    /*Microsoft - Edge*/
+    background: -ms-linear-gradient(to left bottom,red,yellow,blue);
+    /*Todos*/
+    background: linear-gradient(to left bottom,red,yellow,blue);
+}
+#seis{
+    /*si no soporta gradientes*/
+    background: red;
+    /*Opera*/
+    background: -o-linear-gradient(70deg,red,yellow, blue);
+    /*Safari*/
+    background: -webkit-linear-gradient(70deg,red,yellow,blue);
+    /*Firefox*/
+    background: -moz-linear-gradient(70deg,red,yellow,blue);
+    /*Microsoft - Edge*/
+    background: -ms-linear-gradient(70deg,red,yellow,blue);
+    /*Todos*/
+    background: linear-gradient(70deg,red,yellow,blue);
+}
+#siete{
+    /*si no soporta gradientes*/
+    background: red;
+    /*Opera*/
+    background: -o-repeating-linear-gradient(45deg,black,white 2%,black);
+    /*Safari*/
+    background: -webkit-repeating-linear-gradient(45deg,black,white 2%,black);
+    /*Firefox*/
+    background: -moz-repeating-linear-gradient(45deg,black,white 2%,black);
+    /*Microsoft - Edge*/
+    background: -ms-repeating-linear-gradient(45deg,black,white 2%,black);
+    /*Todos*/
+    background: linear-gradient(45deg,black,white 2%,black);
+}
+.texto{
+    position: relative;
+    top: 15px;
+}
