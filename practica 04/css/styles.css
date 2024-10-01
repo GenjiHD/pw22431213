@@ -1,0 +1,206 @@
+html {
+    --color-verde: #74f43c;
+    --color-contenido: gray;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 1024px;
+    margin: 0px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+}
+
+.logo {
+    height: 50px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    margin-left: 20px;
+}
+
+.iconos {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.iconos img {
+    height: 40px;
+}
+
+.buy {
+    position: absolute;
+    right: 25px; 
+    top: 10px;
+}
+
+.buy img[src="img/buy.png"] {
+    width: 60px;
+    transition: transform 1s;
+}
+
+.buy img[src="img/buy.png"]:hover {
+    transform: scale(1.2);
+}
+
+.buy img[src="img/go_to_shop.png"] {
+    width: 200px;
+    margin-top: 20px;
+}
+
+nav {
+    width: 100%;
+    border-bottom: 1px dashed gray;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    font-weight: bold;
+    margin: 0px -4px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    padding-bottom: 30px;
+    font-size: 50px;
+    font-weight: bolder;
+    border-bottom: 1px dashed gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero h1 span {
+    color: var(--color-verde);
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: gray;
+}
+
+.bikeArticle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bike-image {
+    position: relative;
+}
+
+.bike-image img {
+    max-width: 100%;
+    height: auto;
+    width: 330px;
+    margin-top: 30px;
+}
+
+.warranty {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 10px;
+
+}
+
+.warranty img {
+    width: 100px;
+    height: auto;
+}
+
+.video {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.video img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    color: var(--color-contenido);
+    padding: 20px;
+    text-align: start;
+    background-color: #f9f9f9;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+.footer-top .social-icons img {
+    margin-right: 10px;
+}
+
+.footer-top p {
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+}
+
+.footer-links article {
+    text-align: left;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--color-contenido);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: var(--color-contenido);
+}
+
+.footer-links p {
+    font-size: 14px;
+    line-height: 1.6;
+}
