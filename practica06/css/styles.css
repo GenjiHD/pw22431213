@@ -1,0 +1,143 @@
+body{
+    font-family: sans-serif, Arial;
+    margin: 0px auto;
+}
+header{
+    align-items: center;
+    background-color: rgba(0, 0, 0, 255);
+    color: white;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+nav{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+nav p{
+    font-size: 1em;
+}
+nav img{
+    width: 40px;
+}
+.buttons{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+}
+.buttons li{
+    margin-left: 5px;
+}
+.buttons button{
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    padding: 10px 20px;
+}
+.Submit{
+    background-color: rgba(24, 26, 28, 255);
+    border: none;
+}
+.Sign{
+    background-color: rgba(60, 80, 200, 255);
+    border: none;
+}
+.banner{
+    background-color: rgba(200, 200, 220, 255);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 200px;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+}
+.banner h1{
+    font-size: 3em;
+}
+.banner form{
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    font-size: 0.5em;
+    justify-content: center;
+    margin: 20px auto;
+    width: 400px;
+}
+.search-input{
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    padding: 15px 20px;
+    width: 400px;
+}
+.search-button{
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: grey;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15 px;
+}
+article{
+    display: flex;
+    margin: 0px 20px;
+    width: 100%;
+}
+.article-branches{
+    align-items: center;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 100px;
+}
+.article-branches a{
+    color:blue;
+}
+.article-branches .branches-body{
+    display: inline;
+    padding: 0px;
+}
+figure{
+    margin: 20px 20px;
+    height: 100%;
+}
+figure img{
+    height: 50%;
+    width: 80px;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}
+.footer-info{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.footer-info article{
+    background-color: black;
+}
+.footer-info img{
+    height: 40px;
+    width: 40px;
+}
+.footer-info ul li{
+    list-style: none;
+    margin: 5px;
+}
+.footer-info .Contact-options{
+    margin: 0px;
+    grid-column: 4/4;
+    grid-row: 2;
+}
+.footer-info .Copyright{
+    display: grid;
+    grid-column: 5/5;
+    grid-row: 2;
+    text-align: left;
+}
