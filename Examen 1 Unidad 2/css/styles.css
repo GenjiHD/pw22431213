@@ -165,24 +165,24 @@ main .banner a{
 .featured-resource p{
     margin: 15px 15px 15px 15px;
 }
-#a img{
+#img1 img{
     width: 225px;
     margin: 92px 0px 0px 0px;
 }
-#b img{
+#mg2 img{
     width: 225px;
     margin: 50px 0px 0px 0px;
 }
-#a img{
+#img3 img{
     width: 225px;
     margin: 50px 0px 0px 0px;
 }
-#a{
+#img1{
     background:#f6f6ea;
 }
-#b{
+#img2{
     background:#f3f2fb;
 }
-#c{
+#img3{
     background:#f6f6ea;
 }
