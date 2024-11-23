@@ -1,11 +1,15 @@
 import {Personal,PersonalNuevo} from '../services/typesPersonal';
 import mysql from 'mysql2/promise';
+import { personalSchema } from '../schemas/personal.schema';
+import { error } from 'console';
 
 const connection = mysql.createPool({
     host: "localhost",
     user: "root",
     password: "",
-    database: "pw2024"
+    database: "pw2024",
+    port: 3306,
+    multipleStatements: false
 });
 
 export const getPersonal = async () => {
@@ -19,6 +23,11 @@ export const getPersonal = async () => {
 
 export const encuentraPersonal = async (id:number) => {
     try{
+        const identificador = {id:id};
+        const validacion = personalSchema.safeParse(identificador);
+        if(!validacion.success){
+            return {error: validacion.error};
+        }
         const [results] = await connection.query('SELECT * FROM personal WHERE id = ? LIMIT 1', id);
         return results;
     }catch(err){
@@ -26,8 +35,29 @@ export const encuentraPersonal = async (id:number) => {
     }
 };
 
+export const encuentraPersonalTelefono = async (telefono:string) => {
+    try{
+        // const consulta = `SELECT * FROM personal WHERE telefono=${telefono} AND estatus=1`;
+        // const [results] = await connection.query(consulta);
+        const tel = {telefono: telefono};
+        const validacion = personalSchema.safeParse(tel);
+        if(!validacion.success){
+            return {error: validacion.error};
+        }
+        const [results] = await connection.query('SELECT * FROM personal WHERE telefono = ? AND estatus=1', telefono);
+        return results;
+    }catch(err){
+        return {error: "No se puede encontar al personal con ese numero de telefono"};
+    }
+    
+}
+
 export const agregarPersonal = async (nuevo:PersonalNuevo) => {
     try{
+        const validacion = personalSchema.safeParse(nuevo);
+        if(!validacion.success){
+            return {error: validacion.error};
+        }
         const [results] = await connection.query('INSERT INTO personal(nombre,direccion,telefono,estatus) values(?,?,?,?)',[nuevo.nombre,nuevo.direccion,nuevo.telefono,nuevo.estatus]);
         return results;
     }catch(err){
