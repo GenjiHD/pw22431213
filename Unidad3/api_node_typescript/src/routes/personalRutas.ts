@@ -6,7 +6,6 @@ const router = express.Router();
 
 //http://localhost:3001/api/personal/ <---
 router.get('/',async (_req:Request, res:Response) => {
-    console.log('llego');
     let personal = await personalServices.getPersonal();
     res.send(personal);
 });
