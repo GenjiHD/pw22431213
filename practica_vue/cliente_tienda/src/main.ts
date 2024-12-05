@@ -4,7 +4,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
+const app = createApp(App);
+
+//Paquete para la impresion en Excel
+import JsonExcel from 'vue-json-excel3';
+app.component('downloadExcel', JsonExcel);
 
 app.use(router)
 

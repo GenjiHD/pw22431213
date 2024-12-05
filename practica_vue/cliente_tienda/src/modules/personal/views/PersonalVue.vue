@@ -1,15 +1,27 @@
 <template>
     <section>
-        <h3>Personal</h3>
+        <!-- <h3>Personal</h3> -->
         <div>
             <RouterLink :to="{path: '/personal/agregar'}">
                 <button class="btn btn-sm btn-outline-primary">
                     Agregar <i class="fa fa-plus"></i>
                 </button>
             </RouterLink>
+            &nbsp;
+            <button @click.prevent="imprimirPersonalPDF" class="btn btn-sm btn-outline-primary" v-if="personal.length > 0">
+                Imprimir <i class="fa fa-print"></i>
+            </button>
+            &nbsp;
+            <!-- Agregamo sun boton nuevo -->
+             <button class="btn btn-sm btn-outline-primary" v-if="personal.length > 0">
+                <download-excel :data="personal" type="xlsx" name="personal.xlsx">
+                    Excel <i class="fa fa-file-excel-o"></i>
+                </download-excel>
+             </button>
         </div>
     </section>
-    <table class="table table-striped">
+    <table class="table table-striped" id="tablaPersonal">
+        <caption><h3>Personal</h3></caption>
         <thead>
             <tr>
                 <th>Clave</th>
@@ -45,6 +57,7 @@
 </template>
 
 <script setup lang="ts">
+    import html2PDF from 'jspdf-html2canvas';
     import { onMounted } from 'vue';
     import { UsePersonal } from '../controllers/UsePersonal';
     const { getPersonal,personal } = UsePersonal();
@@ -52,7 +65,19 @@
     // Cuando la pagina es visible y esta cargada
     onMounted(async () => {
         await getPersonal();
+
     });
+
+    const imprimirPersonalPDF = async () => {
+        let pagina = document.getElementById('tablaPersonal');
+        await html2PDF(pagina, {
+            jsPDF:{
+                format:'a4',
+            },
+            imageType: 'image/jpeg',
+            output: './reporte_personal.pdf'
+        })
+    };
 
     // load <--- carga, en memoria
     // onMounted <--- cargada y se ve en la pantalla
@@ -68,5 +93,12 @@
 
     .centrado{
         text-align: center;
+    }
+
+    caption{
+        caption-side: top;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
     }
 </style>
